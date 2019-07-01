@@ -34,6 +34,10 @@ app.use(session({
 	store: sessionStore
 }))
 
+app.get('/', function(req,res){
+	res.sendStatus(200)
+})
+
 //Listen in current port
 app.listen(PORT, () => console.log(`>SERVER RUNNING ON PORT:${PORT}`))
 
