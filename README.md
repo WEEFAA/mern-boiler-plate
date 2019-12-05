@@ -16,13 +16,13 @@ _This is optional, don't include optional_name on the command if you don't want 
 Once you've done cloning the repo, change directory to your project folder, see command below. If you didn't specify your optional_name, _mern-boiler-plate_ will be the default project folder name.
 
 ```
-	cd mern-boiler-plate && cd server && npm install setup
+	cd mern-boiler-plate && cd server && npm run setup
 ```
 
 If you specified the name of your own project folder...
 
 ```
-	cd <name_of_your_project_folder> && cd server && npm install
+	cd <name_of_your_project_folder> && cd server && npm run setup
 ```
 
 This commands will directly install all the project dependencies and will take quite some time so, please be patient.
