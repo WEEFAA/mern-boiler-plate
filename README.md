@@ -34,7 +34,7 @@ After all the dependencies are installed, you can easily run your app by...
 	npm run app
 ```
 
-easily as that!
+easy as that!
 
 
 ## DISCLAIMER
