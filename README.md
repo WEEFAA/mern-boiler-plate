@@ -2,36 +2,35 @@
 
 a simple pre-configured mern project
 
-## RUN SERVER
-
-change directory into server folder
-
+## SETUP
+Using your terminal, clone this repo by doing this
 ```
-	cd server && npm install
+	git clone https://github.com/WEEFAA/mern-boiler-plate.git <optional_name>
 ```
 
-and run 
+_name your own project by inserting the name on optional_name without brackets_
+_this is optional, don't include optional_name on the command if you don't want to_
+
+## INSTALLATION
+
+Once you've clone the repo, change directory to your project folder, see command below.
+If you didn't specify your optional_name, _mern-boiler-plate_ will be the default project folder name.
 
 ```
- 	npm run dev
+	cd mern-boiler-plate && cd server && npm install setup
 ```
 
-## START CLIENT
-
-open a new terminal and change directory into client folder
+>If you specified the name of your own project folder...
 
 ```
-	cd client && npm install
-```
-and run
-
-```	
-	npm run start
+	cd <name_of_your_project_folder> && cd server && npm install
 ```
 
-# ...
+>This commands will directly install all the project dependencies and will take quite some >time so, please be patient.
+
+
 
 [CLIENT](http://localhost:3030) **PORT 3030**
-[SERVER](http://localhost:3032) **PORT 3032**
+[SERVER](http://localhost:4040) **PORT 4040**
 
 >you could use concurrently to simultaneously start Client && Server
