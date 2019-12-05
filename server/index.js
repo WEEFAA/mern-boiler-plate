@@ -17,10 +17,14 @@ const {
 
 // construct database uri 
 const mongo_uri = DEV_DB || `${MONGO_DB_PREFIX}://${MONGO_DB_USER}:${MONGO_DB_PASSWORD}@${MONGO_DB_HOST}/${MONGO_DB_NAME}?${MONGO_DB_OPTIONS}`
+
 const db_options = {
-	useNewUrlParser:true,
-	useFindAndModify:true
+	useNewUrlParser: true,
+	useFindAndModify: true,
+	dbName:MONGO_DB_NAME,
+	useCreateIndex: true
 }
+
 // connect to the database production||development
 const database = mongoose.connect(mongo_uri, db_options)
 
