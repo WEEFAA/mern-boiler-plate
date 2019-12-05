@@ -7,7 +7,7 @@ const MongoDbStore = require('connect-mongodb-session')(session)
 const app = express()
 
 // configurations
-const config = !process.env.NODE_ENV ? require('../config') : process.env
+const config = require('../config')
 
 const { 
 	PORT, DEV_DB, SESSION_SECRET,
