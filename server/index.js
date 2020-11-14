@@ -2,18 +2,19 @@ const express = require('express')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const MongoDbStore = require('connect-mongodb-session')(session)
-
 // app||server instance
 const app = express()
 
-// configurations
-const config = require('../config')
+// only use local env on 'development'
+if(process.env.NODE_ENV !== "production"){
+	require('dotenv').config()
+}
 
 const { 
 	PORT, DEV_DB, SESSION_SECRET,
 	MONGO_DB_USER, MONGO_DB_PASSWORD, MONGO_DB_HOST,
 	MONGO_DB_NAME, MONGO_DB_PORT, MONGO_DB_PREFIX
- } = config 
+ } = process.env 
 
 // construct database uri 
 const mongo_uri = DEV_DB || `${MONGO_DB_PREFIX}://${MONGO_DB_USER}:${MONGO_DB_PASSWORD}@${MONGO_DB_HOST}/${MONGO_DB_NAME}?${MONGO_DB_OPTIONS}`
