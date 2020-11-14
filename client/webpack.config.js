@@ -11,8 +11,7 @@ const client_env = {
 module.exports = {
 	output:{
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'main.js',
-		publicPath: '/'
+		filename: 'main.js'
 	},
 	devServer: {
      	historyApiFallback: true
