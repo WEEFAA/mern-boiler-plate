@@ -13,7 +13,8 @@ if(process.env.NODE_ENV !== "production"){
 const { 
 	PORT = 4040, 
 	DEV_DB = "mongodb://localhost:27017/mern", // PORT 27017 is the default port for mongodb 
-	SESSION_SECRET = "default_secret"
+	SESSION_SECRET = "default_secret",
+	SESSION_COOKIE_NAME = "mern.weefa"
  } = process.env 
 
 
@@ -35,10 +36,12 @@ const sessionStore = new MongoDbStore({ uri: DEV_DB })
 app.use(session({
 	secret: SESSION_SECRET,
 	cookie: { 
-		maxAge: 1000 * 60 * 60 * 24 * 1 /* one day*/ 
+		maxAge: 1000 * 60 * 60 * 24, /* one day*/ 
+		httpOnly: true
 	},
 	resave: false,
 	saveUninitialized:false,
+	name: SESSION_COOKIE_NAME,
 	store: sessionStore // your session store can be seen in your database collections
 }))
 
