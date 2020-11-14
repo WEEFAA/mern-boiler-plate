@@ -17,7 +17,7 @@ if(process.env.NODE_ENV !== "production"){
 }
 
 const { 
-	PORT = 4040, 
+	PORT = 4000, 
 	DEV_DB = "mongodb://localhost:27017/mern", // PORT 27017 is the default port for mongodb 
 	SESSION_SECRET = "default_secret",
 	SESSION_COOKIE_NAME = "mern.weefa"
