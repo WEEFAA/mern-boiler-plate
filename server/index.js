@@ -62,10 +62,15 @@ app.use(session({
 	store: sessionStore 
 }))
 
-//test route <-- delete this route once all setup are complete
+//Routes
+// sample _1
 app.get('/', function(req,res){
 	res.sendStatus(200)
 })
+// sample _2 
+// express router for API 
+const api = require('./routes/api')
+app.use('/api', api)
 
 //Listen in PORT
 app.listen(PORT, () => console.log(`> Server running on: http://localhost:${PORT}`))
