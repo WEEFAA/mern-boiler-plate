@@ -1,5 +1,2 @@
-
-# Dependency directories
-client/node_modules/
-server/node_modules/
-
+# top level packages
+node_modules
