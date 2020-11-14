@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const MongoDbStore = require('connect-mongodb-session')(session)
+const cors = require('cors')
 // app||server instance
 const app = express()
 
@@ -31,6 +32,9 @@ const database = mongoose.connect(DEV_DB, db_options)
 
 //create a session store
 const sessionStore = new MongoDbStore({ uri: DEV_DB })
+
+// configuring CORS
+app.use(cors())
 
 // configuring session
 app.use(session({
