@@ -43,7 +43,7 @@ the configuration of your server. Look at the contents of your server file to se
 some of the environment variables used.
 
 
-[CLIENT](http://localhost:3030) **PORT 3000**
-[SERVER](http://localhost:4040) **PORT 4000**
+- [CLIENT](http://localhost:3030) **PORT 3000**
+- [SERVER](http://localhost:4040) **PORT 4000**
 
->you could use concurrently to simultaneously start Client && Server
+>you can use concurrently to simultaneously start Client && Server
