@@ -1,0 +1,25 @@
+{
+  "name": "mern-boiler-plate",
+  "version": "1.0.0",
+  "description": "open source mern boiler plate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WEEFAA/mern-boiler-plate.git"
+  },
+  "keywords": [
+    "reactjs",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "weefa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WEEFAA/mern-boiler-plate/issues"
+  },
+  "homepage": "https://github.com/WEEFAA/mern-boiler-plate#readme"
+}
