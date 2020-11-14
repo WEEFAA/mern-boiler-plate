@@ -3,7 +3,10 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 //client enviroment variables
-const { client_env } = require('./../config/')
+const client_env = {
+	// default api endpoint
+	API: 'http://localhost:4040/api'
+}
 
 module.exports = {
 	output:{
