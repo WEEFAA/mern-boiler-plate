@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import 'bulma/css/bulma.css'
 
 class App extends Component {
 	render(){
