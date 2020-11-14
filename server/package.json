@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js",
-    "setup": "npm install && npm run setup-client",
-    "setup-client": "cd .. && cd client && npm install && cd .. && cd server",
-    "app": "concurrently -n api,client \"npm run server\" \"cd .. && cd client && npm run start\""
+    "server": "nodemon index.js"
   },
   "author": "weefa",
   "license": "ISC",
