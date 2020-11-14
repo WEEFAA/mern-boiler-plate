@@ -33,7 +33,12 @@ const db_options = {
 }
 
 // connect to the database production||development
-const database = mongoose.connect(DEV_DB, db_options)
+try{
+	mongoose.connect(DEV_DB, db_options)
+}catch(e){
+	console.info("> Mongoose failed to connect!")
+	console.error(e)
+}
 
 //create a session store
 const sessionStore = new MongoDbStore({ uri: DEV_DB })
