@@ -11,26 +11,23 @@ if(process.env.NODE_ENV !== "production"){
 }
 
 const { 
-	PORT, DEV_DB, SESSION_SECRET,
-	MONGO_DB_USER, MONGO_DB_PASSWORD, MONGO_DB_HOST,
-	MONGO_DB_NAME, MONGO_DB_PORT, MONGO_DB_PREFIX
+	PORT = 4040, 
+	DEV_DB = "mongodb://localhost:27017/mern", // PORT 27017 is the default port for mongodb 
+	SESSION_SECRET = "default_secret"
  } = process.env 
 
-// construct database uri 
-const mongo_uri = DEV_DB || `${MONGO_DB_PREFIX}://${MONGO_DB_USER}:${MONGO_DB_PASSWORD}@${MONGO_DB_HOST}/${MONGO_DB_NAME}?${MONGO_DB_OPTIONS}`
 
 const db_options = {
 	useNewUrlParser: true,
 	useFindAndModify: true,
-	dbName:MONGO_DB_NAME,
 	useCreateIndex: true
 }
 
 // connect to the database production||development
-const database = mongoose.connect(mongo_uri, db_options)
+const database = mongoose.connect(DEV_DB, db_options)
 
 //create a session store
-const sessionStore = new MongoDbStore({ uri: mongo_uri })
+const sessionStore = new MongoDbStore({ uri: DEV_DB })
 
 // configuring session
 app.use(session({
