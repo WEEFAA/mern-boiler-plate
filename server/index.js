@@ -1,8 +1,13 @@
+// server stuff
 const express = require('express')
 const mongoose = require('mongoose')
+// session management
 const session = require('express-session')
 const MongoDbStore = require('connect-mongodb-session')(session)
+
+// Cross Origin Resource Sharing 
 const cors = require('cors')
+
 // app||server instance
 const app = express()
 
@@ -57,7 +62,7 @@ app.get('/', function(req,res){
 	res.sendStatus(200)
 })
 
-//Listen in current port
+//Listen in PORT
 app.listen(PORT, () => console.log(`> Server running on: http://localhost:${PORT}`))
 
 //EVENTS
