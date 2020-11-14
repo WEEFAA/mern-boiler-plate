@@ -18,8 +18,10 @@ const {
 
 
 const db_options = {
+	// these options are recommended by mongodb
 	useNewUrlParser: true,
 	useFindAndModify: true,
+	// optional, more on this mongodb website.
 	useCreateIndex: true
 }
 
