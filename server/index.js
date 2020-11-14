@@ -42,7 +42,10 @@ app.use(session({
 	resave: false,
 	saveUninitialized:false,
 	name: SESSION_COOKIE_NAME,
-	store: sessionStore // your session store can be seen in your database collections
+	// using a store is optional,
+	// you can use the default MemoryStore of express-session by commenting this property
+	// NOTE: only do that if you're in development
+	store: sessionStore 
 }))
 
 //test route <-- delete this route once all setup are complete
