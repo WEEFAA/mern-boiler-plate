@@ -54,10 +54,10 @@ app.get('/', function(req,res){
 })
 
 //Listen in current port
-app.listen(PORT, () => console.log(`SERVER RUNNING ON PORT:${PORT}`))
+app.listen(PORT, () => console.log(`> Server running on: http://localhost:${PORT}`))
 
 //EVENTS
-// listen for connection
-mongoose.connection.on('connected',() => console.log("--Database connected--") )
+// listen for database connection
+mongoose.connection.on('connected',() => console.log("> MongoDB Database connected"))
 // listen for session store connection
-sessionStore.on('error',() => console.log('--Session Store Error--'))
+sessionStore.on('error',() => console.log('> Session Store Failed'))
